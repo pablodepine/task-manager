@@ -1,0 +1,38 @@
+.title {
+  text-align: center;
+}
+
+.content {
+  display: grid;
+}
+
+.button-area {
+  width: 100%;
+}
+
+.nova-tarefa-button {
+  float: right;
+  margin-right: 1.3rem;
+}
+
+.board {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.column {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.card {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: move;
+}

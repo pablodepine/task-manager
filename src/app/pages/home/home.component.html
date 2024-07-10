@@ -1,0 +1,26 @@
+<section>
+  <h1 class="title">Gerenciador de Tarefas</h1>
+  <div class="content">
+    <div class="button-area">
+      <button class="btn btn-primary nova-tarefa-button">Nova tarefa</button>
+    </div>
+    <div class="board" cdkDropListGroup>
+      <div
+        class="column"
+        *ngFor="let column of board"
+        cdkDropList
+        [cdkDropListData]="column.cards"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <h2>{{ column.name }}</h2>
+        <div class="card" *ngFor="let card of column.cards" cdkDrag>
+          <div class="card-body">
+            <h5 class="card-title">{{ card.titulo }}</h5>
+            <p class="card-text">{{ card.prioridade }}</p>
+            <p class="card-text">{{ card.descricao }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

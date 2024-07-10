@@ -1,0 +1,33 @@
+<section class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Usuário</label>
+      <input
+        formControlName="nome"
+        type="email"
+        class="form-control"
+        aria-describedby="emailHelp"
+        placeholder="Insira seu usuário"
+      />
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Senha</label>
+      <input
+        formControlName="senha"
+        type="password"
+        class="form-control"
+        placeholder="Insira a sua senha"
+      />
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1"
+        >Lembrar minha senha</label
+      >
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
+      Entrar
+    </button>
+  </form>
+</section>
