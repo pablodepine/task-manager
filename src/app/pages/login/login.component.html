@@ -20,14 +20,22 @@
         placeholder="Insira a sua senha"
       />
     </div>
-    <div class="mb-3 form-check">
+    <!-- <div class="mb-3 form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1" />
       <label class="form-check-label" for="exampleCheck1"
         >Lembrar minha senha</label
       >
-    </div>
+    </div> -->
     <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
       Entrar
     </button>
   </form>
+
+  <div
+    *ngIf="showAlert"
+    class="alert alert-danger login-error-alert"
+    role="alert"
+  >
+    Usuário ou senha inválidos, tente novamente.
+  </div>
 </section>
