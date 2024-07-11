@@ -1,6 +1,6 @@
 # TaskManager
 
-Este projeto tem por finalidade aplicar e desenvolver meus conhecimentos a cerca do framework Angular.
+Este projeto tem por finalidade aplicar e desenvolver meus conhecimentos acerca do framework Angular.
 
 ## Objetivo do projeto
 
