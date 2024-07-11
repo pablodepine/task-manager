@@ -1,9 +1,14 @@
+section {
+  margin-top: 3rem;
+}
+
 .title {
   text-align: center;
 }
 
 .content {
   display: grid;
+  margin-top: 2rem;
 }
 
 .button-area {
@@ -22,7 +27,7 @@
 }
 
 .column {
-  background: #f0f0f0;
+  background: #74ade9;
   padding: 10px;
   border-radius: 5px;
   width: 30%;
