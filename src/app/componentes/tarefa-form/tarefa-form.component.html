@@ -22,12 +22,15 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Prioridade</label>
-        <input
+        <select
           formControlName="prioridade"
-          type="text"
-          class="form-control"
-          placeholder="Insira o subtítulo"
-        />
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="Alta">Alta</option>
+          <option value="Média">Média</option>
+          <option value="Baixa">Baixa</option>
+        </select>
       </div>
       <div class="mb-3">
         <label class="form-label">Descriçao</label>

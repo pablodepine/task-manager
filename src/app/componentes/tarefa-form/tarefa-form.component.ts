@@ -28,6 +28,8 @@ export class TarefaFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submit.emit(this.cadastroForm.value);
+    if (this.cadastroForm.valid) {
+      this.submit.emit(this.cadastroForm.value);
+    }
   }
 }
