@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   CdkDragDrop,
   DragDropModule,
@@ -6,8 +6,14 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import {
+  ActivatedRoute,
+  Router,
+  RouterLink,
+  RouterModule,
+} from '@angular/router';
 import { CadastroComponent } from '../cadastro/cadastro.component';
+import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +22,7 @@ import { CadastroComponent } from '../cadastro/cadastro.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   exibeCadastroTemplate = false;
 
   board = [
@@ -67,7 +73,15 @@ export class HomeComponent {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private sharedDataService: SharedDataService) {}
+
+  ngOnInit(): void {
+    this.sharedDataService.tarefa$.subscribe((tarefa) => {
+      if (tarefa) {
+        this.board[0].cards.unshift(tarefa);
+      }
+    });
+  }
 
   drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
