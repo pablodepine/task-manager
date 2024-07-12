@@ -6,15 +6,19 @@ import {
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
+import { Router, RouterLink, RouterModule } from '@angular/router';
+import { CadastroComponent } from '../cadastro/cadastro.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, DragDropModule],
+  imports: [CommonModule, DragDropModule, CadastroComponent, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  exibeCadastroTemplate = false;
+
   board = [
     {
       name: 'A fazer',
@@ -63,6 +67,8 @@ export class HomeComponent {
     },
   ];
 
+  constructor(private router: Router) {}
+
   drop(event: CdkDragDrop<any[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
@@ -79,4 +85,8 @@ export class HomeComponent {
       );
     }
   }
+
+  // adicionaTarefa() {
+  //   this.router.navigate(['/cadastro']);
+  // }
 }

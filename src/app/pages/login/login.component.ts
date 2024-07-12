@@ -31,8 +31,6 @@ export class LoginComponent implements OnInit {
       nome: new FormControl('', [Validators.required]),
       senha: new FormControl('', [Validators.required]),
     });
-
-    console.log(this.users);
   }
 
   onSubmit() {
