@@ -1,27 +1,18 @@
 # TaskManager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
+Este projeto tem por finalidade aplicar e desenvolver meus conhecimentos acerca do framework Angular.
 
-## Development server
+## Objetivo do projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O task manager irá servir como um gerenciador de tarefas básicos, onde o usuário poderá organizar seus a fazeres.
 
-## Code scaffolding
+## Funcionamento
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Nesta fase inicial do projeto, o mesmo contém apenas uma tela que é a tela de gerenciador de tarefas, nesta tela estão dispostas 3 colunas, nas quais o usuário pode organizar suas tarefas entre "A fazer", "Em progesso" e "Feito".
 
-## Build
+## Imagens do Projeto
+### Tela de login
+![tela-login](https://github.com/pablodepine/task-manager/assets/55753334/48b28a67-ff78-407f-a407-c4cc41c3fb7f)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Tela do gerenciador de tarefas
+![tela-home](https://github.com/pablodepine/task-manager/assets/55753334/d0b94320-f410-4095-aa35-bbf0010019ad)
