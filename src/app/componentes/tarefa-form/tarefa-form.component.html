@@ -1,0 +1,50 @@
+<section class="cadastro">
+  <h1 class="titulo">Cadastro de nova tarefa</h1>
+  <div class="subtitulo">
+    Nesta tela é possível criar uma nova tarefa, ao clicar em cadastar você será
+    direcinado para a tela de gerenciamento de tarefas e a sua nova tarefa será
+    encontrara na coluna "A fazer".
+    <br />
+    <b>TODOS OS CAMPOS SÃO OBRIGATÓRIOS</b>
+  </div>
+  <div class="container">
+    <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input
+          formControlName="titulo"
+          type="email"
+          class="form-control"
+          aria-describedby="emailHelp"
+          placeholder="Insira o título"
+        />
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Prioridade</label>
+        <input
+          formControlName="prioridade"
+          type="text"
+          class="form-control"
+          placeholder="Insira o subtítulo"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descriçao</label>
+        <input
+          formControlName="descricao"
+          type="text"
+          class="form-control"
+          placeholder="Insira a sua senha"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary cadastro-button"
+        [disabled]="!cadastroForm.valid"
+      >
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</section>
