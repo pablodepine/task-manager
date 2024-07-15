@@ -20,6 +20,18 @@ section {
   margin-right: 1.3rem;
 }
 
+.prioridade-alta {
+  color: red;
+}
+
+.prioridade-media {
+  color: orange;
+}
+
+.prioridade-baixa {
+  color: green;
+}
+
 .board {
   display: flex;
   justify-content: space-between;
