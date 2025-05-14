@@ -18,20 +18,20 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
         <li key={task.id} className="flex gap-2">
           <Button
             onClick={() => onTaskClick(task.id)}
-            className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${
+            className={`bg-slate-400 text-left w-full text-white p-2 rounded-md cursor-pointer ${
               task.isCompleted ? "line-through" : ""
             }`}
           >
             {task.title}
           </Button>
           <Button
-            className="bg-slate-400 p-2 rounded-md text-white"
+            className="bg-slate-400 p-2 rounded-md text-white cursor-pointer"
             onClick={() => onSeeDetailsClick(task)}
           >
             <ChevronRightIcon />
           </Button>
           <Button
-            className="bg-slate-400 p-2 rounded-md text-white"
+            className="bg-slate-400 p-2 rounded-md text-white cursor-pointer"
             onClick={() => onDeleteTaskClick(task.id)}
           >
             <TrashIcon />
